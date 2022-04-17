@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>   
+     <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>BIKEREC</title>
+    <h1> WE FOUND BIKES FOR YOU</h1>
+</head>
+<style>
+    body {
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  background-color: #000;
+  font-family: Montserrat, Arial, Helvetica, sans-serif;
+  font-weight: 700;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.btn {
+  border: 1.5px solid #fff;
+  border-radius: 0.75rem;
+  padding: 0.75rem 1.25rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+  color: #000;
+  background: #fff;
+}
+
+.wrapper {
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  perspective: 300px;
+}
+
+.parallax__group {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  transform-style: preserve-3d;
+}
+
+.parallax__layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+
+.hero-text {
+  background: linear-gradient(
+    rgba(105, 211, 252, 0.25) 0%,
+    rgba(255, 116, 161, 0.25) 86%,
+    rgba(1, 0, 0, 0.25) 100%
+  );
+  background-size: cover;
+  transform: translateZ(0) scale(1);
+  z-index: 7;
+}
+
+.hero-text h2 {
+  font-size: 1.25rem;
+  position: absolute;
+  left: 2.5rem;
+  top: 2.5rem;
+}
+
+.hero-text ul {
+  font-size: 0.75rem;
+  position: absolute;
+  right: 2.5rem;
+  top: 2.5rem;
+}
+
+.hero-text ul li {
+  margin-left: 2.5rem;
+  list-style-type: none;
+  float: left;
+  visibility: hidden;
+}
+
+.hero-text ul li:nth-of-type(3) {
+  visibility: visible;
+}
+
+.year-container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 17rem;
+  height: 25rem;
+}
+
+.year-container h1 {
+  font-family: Bebas, sans-serif;
+  font-weight: 400;
+  position: absolute;
+  font-size: 12.5rem;
+}
+
+.year-container h1:nth-of-type(1) {
+  top: 10%;
+}
+
+.year-container h1:nth-of-type(2) {
+  left: 30%;
+  bottom: 0;
+}
+
+.year-container h1:nth-of-type(3) {
+  top: 0;
+  right: 30%;
+}
+
+.year-container h1:nth-of-type(4) {
+  right: 0;
+  bottom: 20%;
+}
+
+.social-container {
+  position: absolute;
+  left: 2.5rem;
+  bottom: 2.5rem;
+}
+
+.social-container i {
+  font-size: 1.25rem;
+  margin-right: 0.25rem;
+}
+
+.info-container {
+  background: #000;
+  transform: translateZ(0) scale(1);
+  z-index: 8;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.info-container img {
+  width: 75%;
+  margin-bottom: 2.5rem;
+  filter: saturate(0.65);
+}
+
+.info-container h2,
+.info-container p {
+  margin-bottom: 1rem;
+}
+
+.text-container p:nth-of-type(1) {
+  font-weight: 400;
+  font-size: 0.75rem;
+  margin: 1rem 2.5rem;
+}
+
+.text-container p:nth-of-type(2) {
+  font-size: 0.6rem;
+  margin-bottom: 3rem;
+}
+
+@media (min-width: 760px) {
+  .hero-text ul li {
+    visibility: visible;
+  }
+
+  .info-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 3rem;
+    align-items: center;
+    text-align: left;
+  }
+
+  .info-container img {
+    justify-self: end;
+    width: 75%;
+  }
+
+  .text-container p:nth-of-type(1) {
+    font-size: 1rem;
+    width: 75%;
+    margin: 1rem 0;
+  }
+
+  .text-container p:nth-of-type(1) {
+    font-size: 0.86rem;
+  }
+}
+
+@media (min-width: 1126px) {
+  .sky,
+  .bushes,
+  .water,
+  .hero-text {
+    background-size: contain;
+  }
+}
+    h1{
+    padding-top: 10px;
+    text-align: center;
+    margin: auto;
+ }
+ h3{
+     padding-top: 10px;
+    text-align: center;
+    margin: auto;
+ }
+
+     </style>
+
+<body>
+    <div class="wrapper">
+        <div class="parallax__group hero-container">
+          <div class="parallax__layer sky"></div>
+          <div class="parallax__layer bushes"></div>
+        
+
+          <div class="parallax__layer hero-text">
+           
+            <div class="title-container">
+              <h3>B</h3>
+              <h3>I</h3>
+              <h3>K</h3>
+              <h3>E</h3>
+              <h3>R</h3>
+              <h3>E</h3>
+              <h3>C</h3>
+              <h3> </h3>
+              <h3> </h3>
+              <h3> </h3>
+              <h3> </h3>
+              <h3> </h3>
+              <h3> </h3>
+              <h3> </h3>
+            <a href="https://retrospec.com/products/ascent-mountain-bike-27-5?variant=40099344842924&currency=USD&utm_medium=product_sync&utm_source=google&utm_content=sag_organic&utm_campaign=sag_organic" class="btn">ASCEND MOUNTAIN BIKE</a>
+            <a href="https://www.google.com/shopping/product/1?q=ascent+bike&bih=800&biw=1387&hl=en&sxsrf=APq-WBuI3iEaYuTQoTbWz1iidcgSO2UhAA:1650206902504&uact=5&oq=ascent+bike&gs_lcp=Cgtwcm9kdWN0cy1jYxADMgQIIxAnMgUIABCABDIFCAAQgAQyBQgAEIAEMgQIABAYMgQIABAYMgQIABAYMgQIABAYMgQIABAYMgQIABAYOggIABCwAxCiBEoECEEYAVDtA1jtA2D-CGgCcAB4AIABdogBdpIBAzAuMZgBAKABAcgBAcABAQ&sclient=products-cc&prds=eto:6513882876360616856_1,pid:6513882876360616856" class="btn">ASCENT Mountain Bike - 21 Speed</a>
+            <a href="https://retrospec.com/products/ascent-mountain-bike-26?variant=40099358638252" class="btn">Ascent 26" Mountain Bike </a>
+            <a href="https://retrospec.com/products/ascent-mountain-bike-26?variant=40099358638252" class="btn">Ascent 26" Mountain Bike </a>
+            <a href="https://www.google.com/shopping/product/1?bih=800&biw=1387&hl=en&output=search&q=ascent+bike&oq=ascent+bike&gs_lcp=Cgtwcm9kdWN0cy1jYxABGAAyBwgjELADECcyBwgjELADECcyCAgAEIAEELADMggIABCABBCwAzIICAAQgAQQsAMyBwgAELADEBgyBwgAELADEBgyBwgAELADEBgyBwgAELADEBgyBwgAELADEBgyCwiuARDKAxCwAxAnMgsIrgEQygMQsAMQJzILCK4BEMoDELADECcyCwiuARDKAxCwAxAnMgsIrgEQygMQsAMQJ0oECEEYAVAAWABghx9oAHAAeACAAWmIAWmSAQMwLjGYAQDIAQ_AAQE&sclient=products-cc&prds=eto:4655051641239348263_1,pid:4655051641239348263" class="btn">Ascent Matte Black</a>
+            </div>
+          </div>
+        </div>
+    
+</body>

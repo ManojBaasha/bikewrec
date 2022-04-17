@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    body {font-family: "Lato", sans-serif;}
+    *{
+        box-sizing: border-box;
+    }
+.linkit {
+    background-color: #555;
+    color: white;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 17px;
+    width: 33.3%;
+    text-decoration: none;
+}
+
+.linkit:hover {
+    background-color: #777;
+}
+
+.content {
+    color: white;
+    display: none;
+    padding: 50px;
+    text-align: center;
+}
+    #Home{
+        display: block;
+
+    }
+    iframe{position: relative;top :10px;
+ margin-left: 60px;}
+
+     #fusion{ background-image:url('static/about_us_mid.jpg'); width: 100%; height: 1600px; padding-top:30px;}
+    #fusion p{color: white;text-align: left; margin: 3px;position:relative;
+    top:40px;left: 35px;}
+    #fusion h2{color: white; margin-right:5px;position: relative;left: 35px}
+
+      #fusion1{ background-color:deepskyblue; width: 100%; height: 350px; padding-top:30px;}
+    #fusion1 p{color: white;text-align: left; margin: 3px;position:relative;
+    top:40px;left: 35px;}
+    #fusion1 h2{color: white; margin-right:5px;position: relative;left: 35px}
+
+    #border{background-color:white; width: 100%;height: 75px}
+    .thiscontainer {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.thiscontainer img {vertical-align: middle;}
+
+.thiscontainer .piccontent {
+  position: absolute;
+  top: 0;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.4);
+  color: #f1f1f1;
+  width: 80%;
+  padding: 20px;
+}
+    .footer {
+    padding: 20px;
+    text-align: center;
+    background: #ddd;
+        margin-top: 20px;}
+
+
+#Home {background-color:rgba(177,178,242);}
+#ScanUpload {background-color:rgba(144,238,144);}
+#AboutUs {background-color: rgba(255,182,193);}
+</style>
+</head>
+<body>
+
+<div id="Home" class="content" style="background-image:url('static/cycle_picture_top.jpg/')">
+  <h1><img src = "{{url_for('static', filename='bikeLogo.png')}}" width = "150" height = "150" alt = "logo"></h1>
+  <h2>Find the Bike of Your Dreams!</h2>
+</div>
+
+<div id="ScanUpload" class="content" style="background-image: url('static/upload_top.png')">
+  <h1 style="color:rgba(240,128,128)">Scan Upload</h1>
+  <h2 style="color:rgba(240,128,128)">Upload Your Photos Here!</h2>
+</div>
+
+<div id="AboutUs" class="content" style="background-image: url('static/about_us_top.jpg')">
+  <h1 style="color:rgba(0,255,255)">About Us</h1>
+  <h2 style="color:rgba(0,255,255)">Get to Know Our Team!</h2>
+</div>
+
+<a href="{{ url_for('hello') }}" class="linkit" onmouseover="openCity('Home', this, 'rgba(177,178,242)')">Home</a>
+<a href="{{ url_for('upload') }}" class="linkit" onmouseover="openCity('ScanUpload', this, 'rgba(144,238,144)')">Scan Upload</a>
+<a href="{{ url_for('aboutUs') }}" class="linkit" onmouseover="openCity('AboutUs', this, 'rgba(255,182,193)')">About Us</a>
+
+      <div background-color:rgba(255,182,193);></div>
+
+
+        <div id="fusion">
+   <h2 align = "middle" style="color:rgb(67, 17, 88)">THE BRAINS BEHIND THE MAGIC!</h2>
+
+
+   <table cellpadding="150">
+     <tr><td><h3 align ="middle" style="color:rgb(67, 17, 88)"><u>Pranav Bhartiya</u></h3>
+     <p>
+       <b style="color:rgb(67, 17, 88)">Website Devlopment</b><br><br>
+       <img src = "{{url_for('static', filename='me.JPEG')}}" width = "225" height = "300">
+     </p></td><td><h3 style="color:rgb(67, 17, 88)" align ="middle"><u>Manoj Elango</u></h3>
+     <p>
+       <b style="color:rgb(67, 17, 88)">Software Devlopment</b><br><br>
+       <img src = "{{url_for('static', filename='fool.JPG')}}" width = "225" height = "300">
+     </p></td></tr>
+     <tr><td><h3 style="color:rgb(67, 17, 88)" align ="middle"><u>Rohan Malige</u></h3>
+     <p>
+       <b style="color:rgb(67, 17, 88)">Software Devopment</b><br><br>
+       <img src = "{{url_for('static', filename='dubai.jpg')}}" width = "225" height = "300">
+     </p></td><td><h3 style="color:rgb(67, 17, 88)" align ="middle"><u>Shruti Kakkar</u></h3>
+     <p>
+       <b style="color:rgb(67, 17, 88)">Website Devopment</b><br><br>
+       <img src = "{{url_for('static', filename='sk.jpg')}}" width = "225" height = "300">
+     </p></td></tr>
+     </table>
+    </div>
+
+
+
+
+
+
+<script>
+function openCity(cityName,elmnt,color) {
+    var i, content, linkits;
+    content = document.getElementsByClassName("content");
+    for (i = 0; i < content.length; i++) {
+        content[i].style.display = "none";
+    }
+    linkits = document.getElementsByClassName("linkit");
+    for (i = 0; i < linkits.length; i++) {
+        linkits[i].style.backgroundColor = "";
+    }
+    document.getElementById(cityName).style.display = "block";
+    elmnt.style.backgroundColor = color;
+
+}
+document.getElementById("defaultOpen").click();
+</script>
+
+</body>
+</html>
